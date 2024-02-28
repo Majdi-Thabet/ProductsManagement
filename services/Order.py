@@ -7,7 +7,7 @@ class Order(Cart):
         self.capacity = capacity
         self.size = 0
 
-    def add_product(self, product):
+    def ajouter_produit(self, product):
         if self.size < self.capacity:
             if self.find_product(product) == -1:
                 self.products.append(product)
@@ -17,7 +17,7 @@ class Order(Cart):
         else:
             print("Cannot add more products")
 
-    def remove_product(self, product):
+    def supprimer_produit(self, product):
         index = self.find_product(product)
         if index != -1:
             del self.products[index]
@@ -27,7 +27,7 @@ class Order(Cart):
             print("Product not found in the order")
             return False
 
-    def display_products(self):
+    def afficher_produit(self):
         if self.size == 0:
             print("No Product")
         else:
@@ -35,7 +35,7 @@ class Order(Cart):
                 print(product.get_description())
 
     def total(self):
-        total_sum = sum(product.get_price() for product in self.products)
+        total_sum = sum(product.get_prix() for product in self.products)
         return total_sum
 
     def find_product(self, product):

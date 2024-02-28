@@ -1,11 +1,11 @@
 class Cart:
-    def add_product(self, product):
+    def ajouter_produit(self, product):
         pass
 
-    def remove_product(self, product):
+    def supprimer_produit(self, product):
         pass
 
-    def display_products(self):
+    def afficher_produit(self):
         pass
 
     def total(self):
